@@ -1,0 +1,301 @@
+/* Общие стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #fff;
+    line-height: 1.6;
+}
+
+a {
+    color: #bb86fc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #fff;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-weight: 700;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Шапка сайта (Header) */
+header {
+    background-color: #1e1e1e;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Навигация */
+.main-nav ul,
+.user-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.main-nav li,
+.user-nav li {
+    margin-left: 20px;
+}
+
+.main-nav a,
+.user-nav a {
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav a:hover,
+.user-nav a:hover {
+    background-color: #2d2d2d;
+}
+
+/* Поисковая строка */
+.search-box {
+    display: flex;
+}
+
+.search-box input[type="search"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    background-color: #2d2d2d;
+    color: #fff;
+}
+
+.search-box button {
+    background-color: #bb86fc;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-box button:hover {
+    background-color: #9c64e8;
+}
+
+/* Основной контент */
+main {
+    padding: 20px;
+}
+
+/* Секция с приветствием */
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.hero-content {
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.hero-image img {
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Секция с популярными играми */
+.featured-games {
+    margin-bottom: 30px;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.game-card {
+    background-color: #1e1e1e;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.game-card img {
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.game-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.game-card .btn {
+    display: inline-block;
+    background-color: #bb86fc;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.game-card .btn:hover {
+    background-color: #9c64e8;
+}
+
+/* Секция с новостями */
+.news-section {
+    margin-bottom: 30px;
+}
+
+.news-list {
+    list-style: none;
+    padding: 0;
+}
+
+.news-list li {
+    padding: 10px;
+    border-bottom: 1px solid #2d2d2d;
+}
+
+/* Секция с поддержкой */
+.support-section {
+    text-align: center;
+}
+
+.support-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.support-content img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+/* Подвал сайта */
+footer {
+    background-color: #1e1e1e;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    /* Шапка сайта */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .main-nav {
+        display: none;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+    }
+
+    .main-nav li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .main-nav.active {
+        display: block;
+    }
+
+    .user-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .user-nav ul {
+        flex-direction: column;
+    }
+
+    .user-nav li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Бургер-меню */
+    .burger-menu {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        display: block;
+    }
+
+    /* Секция с приветствием */
+    .hero-section {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .support-content {
+        align-items: center;
+    }
+} 
+
+
+
+.hidden {
+    display: none;
+}
+
+
+.logo {
+    color: #ae80ee;
+    font-size: larger;
+}

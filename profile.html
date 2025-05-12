@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игровой профиль - HeedieGames.ru</title>
+    <link rel="stylesheet" href="/static/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Стили для страницы профиля */
+        body {
+            background-color: #121212;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .profile-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-info img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 30px;
+            object-fit: cover;
+        }
+
+        .profile-details {
+            flex-grow: 1;
+        }
+
+        .profile-details p {
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #2d2d2d;
+            padding-bottom: 5px;
+        }
+
+        .game-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .game-list li {
+            padding: 10px;
+            border-bottom: 1px solid #2d2d2d;
+        }
+
+        .game-list li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Игровой профиль</h1>
+
+        <div class="profile-info">
+            <img src="https://pic.rutubelist.ru/user/2024-10-13/67/1a/671a2244581dc0a99e184de35e459053.jpg" alt="Аватар">
+            <div class="profile-details">
+                <p><strong>Имя пользователя:</strong> Не указан</p>
+                <p><strong>Email:</strong> Не указан</p>
+                <p><strong>Баланс:</strong>  0 руб</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">Любимые игры</h2>
+        <ul class="game-list">
+            <li>Cyberpunk 2077</li>
+            <li>The Witcher 3: Wild Hunt</li>
+            <li>Red Dead Redemption 2</li>
+        </ul>
+
+        <h2 class="section-title">Последние достижения</h2>
+        <ul class="game-list">
+            <li>Завершил сюжетную линию в Cyberpunk 2077</li>
+            <li>Получил все достижения в The Witcher 3</li>
+            <li>Открыл все локации в Red Dead Redemption 2</li>
+        </ul>
+    </div>
+</body>
+
+</html>

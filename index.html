@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeedieGames.ru - Твой проводник в мир игр!</title>
+    <link rel="stylesheet" href="static/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+          HeedieGames.ru
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#main">Главная</a></li>
+                <li><a href="#news">Новости</a></li>
+                <li><a href="#support">Поддержка</a></li>
+                <li><a href="https://t.me/+9JRscTCuMt9kZWVi" target="_blank">Наша группа TG</a></li>
+            </ul>
+        </nav>
+
+        <nav class="user-nav">
+            <ul>
+                <li><a href="https://t.me/+9JRscTCuMt9kZWVi">Отзывы</a></li>
+                <li><a href="popolnenie.html">Пополнение</a></li>
+                <li><a href="registracia.html">Регистрация</a></li>
+                <li><a href="vhod.html">Войти</a></li>
+                <li><a href="./profile.html">Профиль</a></li>
+            </ul>
+        </nav>
+
+        <div class="search-box">
+            <input type="search" placeholder="Поиск игр...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="burger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="main" class="hero-section">
+            <div class="hero-content">
+                <h1>Добро пожаловать в HeedieGames.ru</h1>
+                <p>Здесь ты найдешь любимые игры по самым выгодным ценам!</p>
+                <p class="author">by Albert Khachatryan</p>
+                <p>Мы - твой надежный проводник в мире игр. У нас только качественные товары и отличный сервис.</p>
+            </div>
+            <div class="hero-image">
+                <img src="https://i.playground.ru/p/ePCKe38Tn9wT6tGFho7vcQ.jpeg" alt="Главная">
+            </div>
+        </section>
+
+        <section class="featured-games">
+            <h2>Популярные игры</h2>
+            <div class="game-grid">
+                <div class="game-card">
+                    <img src="https://avatars.mds.yandex.net/i?id=46b94131537e28628417789f7f62ed75_l-8261187-images-thumbs&n=13"
+                        alt="Cyberpunk 2077">
+                    <h3>Cyberpunk 2077</h3>
+                    <p>Погрузись в мир будущего!</p>
+                    <a href="popolnenie.html" class="btn">Купить игру</a>
+                </div>
+
+                <div class="game-card">
+                    <img src="https://i.playground.ru/e/eH2WjvwYx_GQJvZX_8NQDA.jpeg" alt="Hogwarts Legacy">
+                    <h3>Hogwarts Legacy</h3>
+                    <p>Твоё наследие ждет тебя.</p>
+                    <a href="popolnenie.html>card.html" class="btn">Купить игру</a>
+                </div>
+
+                <div class="game-card">
+                    <img src="https://avatars.mds.yandex.net/i?id=9bdb07c0439f2270019dd8bf6d98bd12_l-4855057-images-thumbs&n=13"
+                        alt="Red Dead Redemption 2">
+                    <h3>Red Dead Redemption 2</h3>
+                    <p>Дикий Запад уже близко...</p>
+                    <a href="popolnenie.html" class="btn">Купить игру</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="news" class="news-section">
+            <h2>Новости</h2>
+            <ul class="news-list">
+                <li>Сегодня стартовала большая весенняя распродажа — скидки до 80% на топовые игры!</li>
+                <li>Вышел долгожданный патч для RPG «Тени Дракона» с новыми квестами и улучшенной графикой.</li>
+                <li>Стартовали предзаказы на шутер года «Wellum». Успей получить бонусный контент!</li>
+            </ul>
+            <a href="news.html" class="btn">Больше новостей</a>
+        </section>
+
+
+
+
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const moreNewsBtn = document.getElementById('moreNewsBtn');
+                const newsList = document.getElementById('newsList');
+
+                if (moreNewsBtn && newsList) {
+                    moreNewsBtn.addEventListener('click', function () {
+                        const hiddenNews = newsList.querySelectorAll('.hidden');
+                        hiddenNews.forEach(function (newsItem) {
+                            newsItem.classList.remove('hidden');
+                        });
+                        moreNewsBtn.style.display = 'none'; // Скрываем кнопку после раскрытия
+                    });
+                }
+            });
+        </script>
+
+
+
+
+
+
+
+
+        <section id="support" class="support-section">
+            <h2>Поддержка</h2>
+            <div class="support-content">
+                <img src="https://sun1-54.userapi.com/s/v1/ig2/h2Rjw_wOjzvMhGsxqZhcFelmvtunkV3Djw9T3M9P2RCQQgNyr9T3XU8OAOPrDSgVMSAVC0zg-Qj1kptbbEWupTYa.jpg?size=1495x1495&quality=96&crop=52,52,1495,1495&ava=1"
+                    alt="Поддержка">
+                <p>В случае возникновения вопросов или технических проблем, обращайтесь в наш <a
+                        href="https://t.me/+9JRscTCuMt9kZWVi" target="_blank">Telegram-канал</a>. Мы всегда готовы
+                    помочь!</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 HeedieGames.ru. Все права защищены.</p>
+        <p>Мы благодарим вас за то, что вы пользуетесь нашими услугами!</p>
+    </footer>
+
+    <script>
+        // JavaScript для бургер-меню
+        document.querySelector('.burger-menu').addEventListener('click', function () {
+            document.querySelector('.main-nav').classList.toggle('active');
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пополнение баланса - HeedieGames.ru</title>
+    <link rel="stylesheet" href="/static/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Стили для страницы пополнения баланса */
+        body {
+            background-color: #121212;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        input[type="number"],
+        input[type="text"] { /* Добавлено для полей карты */
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #2d2d2d;
+            color: #fff;
+            box-sizing: border-box;
+        }
+
+        .card-details {
+            margin-bottom: 20px;
+        }
+
+        .card-details label {
+            margin-top: 10px;
+        }
+
+        .card-selection {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .card-option {
+            cursor: pointer;
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
+        }
+
+        .card-option:hover {
+            opacity: 0.8;
+        }
+
+        .card-option.selected {
+            opacity: 1;
+        }
+
+        .card-image {
+            width: 80px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #bb86fc;
+            color: #fff;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #9c64e8;
+        }
+
+        .error-message {
+            color: #f44336;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .success-message {
+            color: #4caf50;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        // JavaScript для выбора карты
+        document.addEventListener('DOMContentLoaded', function () {
+            const cardOptions = document.querySelectorAll('.card-option');
+
+            cardOptions.forEach(function (cardOption) {
+                cardOption.addEventListener('click', function () {
+                    // Снимаем выделение со всех карт
+                    cardOptions.forEach(function (option) {
+                        option.classList.remove('selected');
+                    });
+
+                    // Выделяем выбранную карту
+                    cardOption.classList.add('selected');
+
+                    //  Передаем значение выбранной карты в скрытое поле формы (если нужно)
+                    const cardTypeInput = document.getElementById('cardType');
+                    if (cardTypeInput) {
+                        cardTypeInput.value = cardOption.dataset.cardType;
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Пополнение баланса</h1>
+
+
+        <form action="/replenish" method="post">
+
+            <input type="hidden" id="cardType" name="cardType" value="">
+
+            <div class="card-details">
+                <label for="cardNumber">Номер карты:</label>
+                <input type="text" id="cardNumber" name="cardNumber" pattern="[0-9]{16}"
+                    placeholder="XXXX-XXXX-XXXX-XXXX" required>
+
+                <label for="expiryDate">Срок действия:</label>
+                <input type="text" id="expiryDate" name="expiryDate" pattern="(0[1-9]|1[0-2])\/[0-9]{2}"
+                    placeholder="MM/YY" required>
+
+                <label for="cvc">CVC:</label>
+                <input type="text" id="cvc" name="cvc" pattern="[0-9]{3}" placeholder="CVC" required>
+            </div>
+
+
+
+            <button type="submit">Пополнить</button>
+        
+        </form>
+    </div>
+</body>
+
+</html>
